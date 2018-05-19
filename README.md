@@ -8,6 +8,10 @@ A universal seed for nodejs usage..
 npm run dev;
 ```
 
+## Attention
+
+* use own eslint
+
 # Licence
 
 [MIT Licence](https://github.com/facebook/react/blob/master/LICENSE)
