@@ -1,6 +1,6 @@
 {
   "name": "@coco-platform/webpack-preset",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A universal seed for nodejs usage.",
   "main": "lib/index.js",
   "engines": {
