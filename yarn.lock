@@ -16,6 +16,13 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
+"@coco-platform/webpack-plugin-html-minify@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@coco-platform/webpack-plugin-html-minify/-/webpack-plugin-html-minify-0.2.0.tgz#da253d593916326ec45ccedc89c8315d62adc8ae"
+  dependencies:
+    chalk "^2.4.1"
+    html-minifier "^3.5.16"
+
 "@coco-platform/webpack-plugin-inject-external@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@coco-platform/webpack-plugin-inject-external/-/webpack-plugin-inject-external-0.4.0.tgz#ba1659d3f2317371755e2c86e19437544b39b9dc"
@@ -2623,6 +2630,18 @@ html-encoding-sniffer@^1.0.2:
 html-minifier@^3.2.3:
   version "3.5.15"
   resolved "https://registry.yarnpkg.com/html-minifier/-/html-minifier-3.5.15.tgz#f869848d4543cbfd84f26d5514a2a87cbf9a05e0"
+  dependencies:
+    camel-case "3.0.x"
+    clean-css "4.1.x"
+    commander "2.15.x"
+    he "1.1.x"
+    param-case "2.1.x"
+    relateurl "0.2.x"
+    uglify-js "3.3.x"
+
+html-minifier@^3.5.16:
+  version "3.5.16"
+  resolved "https://registry.yarnpkg.com/html-minifier/-/html-minifier-3.5.16.tgz#39f5aabaf78bdfc057fe67334226efd7f3851175"
   dependencies:
     camel-case "3.0.x"
     clean-css "4.1.x"
