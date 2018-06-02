@@ -16,6 +16,16 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
+"@coco-platform/webpack-plugin-inject-external@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@coco-platform/webpack-plugin-inject-external/-/webpack-plugin-inject-external-0.4.0.tgz#ba1659d3f2317371755e2c86e19437544b39b9dc"
+  dependencies:
+    chalk "^2.4.1"
+    lodash "^4.17.10"
+    node-yaml "^3.1.1"
+    posthtml "^0.11.3"
+    posthtml-inject "^0.5.0"
+
 "@types/node@*":
   version "10.1.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.1.2.tgz#1b928a0baa408fc8ae3ac012cc81375addc147c6"
@@ -1065,7 +1075,7 @@ clone@^1.0.2:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
 
-co@^4.6.0:
+co@4.6.0, co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
 
@@ -3424,6 +3434,13 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
+js-yaml@3.9.1:
+  version "3.9.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.9.1.tgz#08775cebdfdd359209f0d2acd383c8f86a6904a0"
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^4.0.0"
+
 js-yaml@^3.4.3, js-yaml@^3.7.0, js-yaml@^3.9.1:
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.11.0.tgz#597c1a8bd57152f26d622ce4117851a51f5ebaef"
@@ -3523,6 +3540,10 @@ jsprim@^1.2.2:
     extsprintf "1.3.0"
     json-schema "0.2.3"
     verror "1.10.0"
+
+junk@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/junk/-/junk-2.1.0.tgz#f431b4b7f072dc500a5f10ce7f4ec71930e70134"
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
@@ -4066,6 +4087,15 @@ node-pre-gyp@^0.6.4:
     tar "^2.2.1"
     tar-pack "^3.4.0"
 
+node-yaml@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/node-yaml/-/node-yaml-3.1.1.tgz#4f93d0aa97475530bc00db03564dfde9c6c5691b"
+  dependencies:
+    co "4.6.0"
+    js-yaml "3.9.1"
+    junk "2.1.0"
+    promise-fs "1.2.3"
+
 node-zopfli@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/node-zopfli/-/node-zopfli-2.0.2.tgz#a7a473ae92aaea85d4c68d45bbf2c944c46116b8"
@@ -4471,7 +4501,7 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
-pify@^2.0.0:
+pify@2.3.0, pify@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
 
@@ -4479,7 +4509,7 @@ pify@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
 
-pinkie-promise@^2.0.0:
+pinkie-promise@2.0.1, pinkie-promise@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
   dependencies:
@@ -4729,13 +4759,6 @@ postcss-ordered-values@^2.1.0:
     postcss "^5.0.4"
     postcss-value-parser "^3.0.1"
 
-postcss-px-to-viewport@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/postcss-px-to-viewport/-/postcss-px-to-viewport-0.0.3.tgz#761259af20ad70adb01f503697337276d7831363"
-  dependencies:
-    object-assign "^4.0.1"
-    postcss "^5.0.2"
-
 postcss-reduce-idents@^2.2.2:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/postcss-reduce-idents/-/postcss-reduce-idents-2.4.0.tgz#c2c6d20cc958284f6abfbe63f7609bf409059ad3"
@@ -4851,7 +4874,7 @@ posthtml-render@^1.0.5, posthtml-render@^1.1.0:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/posthtml-render/-/posthtml-render-1.1.4.tgz#95dac09892f4f183fad5ac823f08f42c0256551e"
 
-posthtml@^0.11.2:
+posthtml@^0.11.2, posthtml@^0.11.3:
   version "0.11.3"
   resolved "https://registry.yarnpkg.com/posthtml/-/posthtml-0.11.3.tgz#17ea2921b0555b7455f33c977bd16d8b8cb74f27"
   dependencies:
@@ -4933,6 +4956,13 @@ progress@^1.1.8:
 progress@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.0.tgz#8a1be366bf8fc23db2bd23f10c6fe920b4389d1f"
+
+promise-fs@1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/promise-fs/-/promise-fs-1.2.3.tgz#402410f92edd8c3978ee5552369f1c5bebccfc22"
+  dependencies:
+    pify "2.3.0"
+    pinkie-promise "2.0.1"
 
 promise-inflight@^1.0.1:
   version "1.0.1"
