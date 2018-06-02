@@ -1,6 +1,6 @@
 {
   "name": "@coco-platform/webpack-preset",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "A universal seed for nodejs usage.",
   "main": "lib/index.js",
   "engines": {
@@ -58,7 +58,6 @@
     "file-loader": "^1.1.11",
     "fork-ts-checker-webpack-plugin": "^0.4.1",
     "html-webpack-plugin": "^3.2.0",
-    "lodash": "^4.17.10",
     "mini-css-extract-plugin": "^0.4.0",
     "optimize-css-assets-webpack-plugin": "^4.0.1",
     "postcss-flexbugs-fixes": "^3.3.1",
