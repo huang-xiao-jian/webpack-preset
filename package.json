@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/coco-template/webpack-preset.git"
+    "url": "git+ssh://git@github.com/coco-platform/webpack-preset.git"
   },
   "keywords": [
     "nodejs",
@@ -35,9 +35,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/coco-template/webpack-preset/issues"
+    "url": "https://github.com/coco-platform/webpack-preset/issues"
   },
-  "homepage": "https://github.com/coco-template/webpack-preset#README",
+  "homepage": "https://github.com/coco-platform/webpack-preset#README",
   "devDependencies": {
     "eslint": "^5.4.0",
     "eslint-config-airbnb-base": "^13.1.0",
