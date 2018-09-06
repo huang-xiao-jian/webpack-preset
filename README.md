@@ -21,7 +21,7 @@ A webpack presets for coco-platform.
 
 ## Attention
 
-- use `babel` compile es-next code, `typescript` output `esnext` style code;
+- use `babel` compile `typescript` source code, make sure `.babelrc` work as expected.
 
 # Licence
 
