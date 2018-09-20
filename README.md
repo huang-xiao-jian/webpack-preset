@@ -6,16 +6,15 @@ A webpack presets for coco-platform.
 
 ```javascript
 /**
- * @typedef {object} Options
+ * @typedef {object} PresetOptions
  *
+ * @property {string} target
  * @property {string} entry
  * @property {string} homepage
- * @property {string} target
- * @property {string} title
- * @property {string} definition - bootcdn external sources
- * @property {boolean} typescript - whether use typescript in project;
- * @property {object} postcss
- * @property {Array} postcss.plugins
+ * @property {string} definition - bootcdn library reflection
+ * @property {boolean} typescript
+ * @property {object} css
+ * @property {boolean} css.modules
  */
 ```
 
