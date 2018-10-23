@@ -56,7 +56,7 @@
   "dependencies": {
     "@babel/core": "^7.0.0",
     "@coco-platform/webpack-plugin-html-minify": "^0.2.0",
-    "@coco-platform/webpack-plugin-inject-external": "^0.4.1",
+    "@coco-platform/webpack-plugin-inject-external": "^0.7.0",
     "autoprefixer": "^9.1.3",
     "babel-loader": "^8.0.0",
     "case-sensitive-paths-webpack-plugin": "^2.1.2",
