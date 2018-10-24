@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 /**
  * =============================================================================
  * webpack development configuration
@@ -80,7 +79,6 @@ development.module
   .use('css')
   .loader('css-loader')
   .end();
-
 development.module
   .rule('assets')
   .test(/\.(png|jpe?g|gif|bmp|mp3|woff|woff2|ttf|eot|svg)(\?.*)?$/)

@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 /**
  * =============================================================================
  * webpack production configuration
@@ -9,7 +8,6 @@
 const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const InjectExternalPlugin = require('@coco-platform/webpack-plugin-inject-external');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -84,7 +82,6 @@ production.module
   .use('css')
   .loader('css-loader')
   .end();
-
 production.module
   .rule('assets')
   .test(/\.(png|jpe?g|gif|bmp|mp3|woff|woff2|ttf|eot|svg)(\?.*)?$/)
