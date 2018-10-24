@@ -12,7 +12,8 @@
     "test:cov": "jest --watch"
   },
   "files": [
-    "lib"
+    "lib",
+    "chain"
   ],
   "repository": {
     "type": "git",
