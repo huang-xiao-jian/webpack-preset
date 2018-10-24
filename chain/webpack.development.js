@@ -5,13 +5,36 @@
  */
 
 // packages
-const webpack = require('webpack');
+const { ContextReplacementPlugin } = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const Config = require('webpack-chain');
 // scope
 const development = new Config();
+/**
+ * @type {Array<DependencyMeta>}
+ */
+const dependencies = [
+  {
+    name: 'CaseSensitivePathsPlugin',
+    dependency: 'case-sensitive-paths-webpack-plugin',
+  },
+  {
+    name: 'HtmlWebpackPlugin',
+    dependency: 'html-webpack-plugin',
+  },
+  {
+    name: 'ContextReplacementPlugin',
+    dependency: 'webpack',
+    destruct: true,
+  },
+  {
+    name: 'BundleAnalyzerPlugin',
+    dependency: 'webpack-bundle-analyzer',
+    destruct: true,
+  },
+];
 
 /* mode */
 development.mode('development').target('web');
@@ -93,7 +116,7 @@ development.module
 development.plugin('CaseSensitive').use(CaseSensitivePathsPlugin);
 development
   .plugin('ContextReplacement')
-  .use(webpack.ContextReplacementPlugin, [/moment\/locale$/, /zh-cn/]);
+  .use(ContextReplacementPlugin, [/moment\/locale$/, /zh-cn/]);
 development.plugin('HTML').use(HtmlWebpackPlugin, [
   {
     inject: 'body',
@@ -124,3 +147,4 @@ development.node
 development.optimization.runtimeChunk({ name: 'manifest' });
 
 module.exports = development;
+module.exports.dependencies = dependencies;

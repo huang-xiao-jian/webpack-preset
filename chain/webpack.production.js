@@ -5,7 +5,7 @@
  */
 
 // packages
-const webpack = require('webpack');
+const { ContextReplacementPlugin } = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
@@ -18,6 +18,58 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const Config = require('webpack-chain');
 // scope
 const production = new Config();
+/**
+ * @type {Array<DependencyMeta>}
+ */
+const dependencies = [
+  {
+    name: 'ContextReplacementPlugin',
+    dependency: 'webpack',
+    destruct: true,
+  },
+  {
+    name: 'CaseSensitivePathsPlugin',
+    dependency: 'case-sensitive-paths-webpack-plugin',
+  },
+  {
+    name: 'HtmlWebpackPlugin',
+    dependency: 'html-webpack-plugin',
+  },
+  {
+    name: 'progress-bar-webpack-plugin',
+    dependency: 'ProgressBarPlugin',
+  },
+  {
+    name: 'MiniCssExtractPlugin',
+    dependency: 'mini-css-extract-plugin',
+  },
+  {
+    name: 'UglifyJsPlugin',
+    dependency: 'uglifyjs-webpack-plugin',
+  },
+  {
+    name: 'OptimizeCSSAssetsPlugin',
+    dependency: 'optimize-css-assets-webpack-plugin',
+  },
+  { name: 'CompressionPlugin', dependency: 'compression-webpack-plugin' },
+  {
+    name: 'HtmlMinifyPlugin',
+    dependency: '@coco-platform/webpack-plugin-html-minify',
+  },
+  {
+    name: 'BundleAnalyzerPlugin',
+    dependency: 'webpack-bundle-analyzer',
+    destruct: true,
+  },
+];
+// preserve MiniCssExtractPlugin loader expression
+const MiniCssExtractPluginLoader = () => {};
+
+Reflect.set(
+  MiniCssExtractPluginLoader,
+  '__expression',
+  'MiniCssExtractPlugin.loader'
+);
 
 /* mode */
 production.mode('production').target('web');
@@ -56,7 +108,7 @@ production.module
   .exclude.add(/node_modules/)
   .end()
   .use('MiniExtract')
-  .loader(MiniCssExtractPlugin.loader)
+  .loader(MiniCssExtractPluginLoader)
   .end()
   .use('css')
   .loader('css-loader')
@@ -77,7 +129,7 @@ production.module
   .add('./public')
   .end()
   .use('MiniExtract')
-  .loader(MiniCssExtractPlugin.loader)
+  .loader(MiniCssExtractPluginLoader)
   .end()
   .use('css')
   .loader('css-loader')
@@ -97,7 +149,7 @@ production.plugin('Progress').use(ProgressBarPlugin);
 production.plugin('CaseSensitive').use(CaseSensitivePathsPlugin);
 production
   .plugin('ContextReplacement')
-  .use(webpack.ContextReplacementPlugin, [/moment\/locale$/, /zh-cn/]);
+  .use(ContextReplacementPlugin, [/moment\/locale$/, /zh-cn/]);
 production.plugin('HTML').use(HtmlWebpackPlugin, [
   {
     inject: 'body',
@@ -150,3 +202,4 @@ production.optimization.minimizer('Uglifyjs').use(UglifyJsPlugin, [
 production.optimization.minimizer('CSS').use(OptimizeCSSAssetsPlugin, []);
 
 module.exports = production;
+module.exports.dependencies = dependencies;
