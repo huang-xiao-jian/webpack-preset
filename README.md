@@ -1,5 +1,7 @@
 # webpack-preset
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/coco-platform/webpack-preset.svg)](https://greenkeeper.io/)
+
 A webpack presets for coco-platform.
 
 ## Usage
