@@ -9,7 +9,9 @@
   "scripts": {
     "precommit": "pretty-quick --staged",
     "test": "jest --coverage",
-    "test:cov": "jest --watch"
+    "test:cov": "jest --watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "files": [
     "lib",
@@ -76,6 +78,8 @@
     "webpack": "^4.17.1",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-chain": "^5.0.1",
-    "webpack-plugin-inject-external": "^0.4.1"
-  }
+    "webpack-plugin-inject-external": "^0.4.1",
+    "snyk": "^1.437.0"
+  },
+  "snyk": true
 }
