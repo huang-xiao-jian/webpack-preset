@@ -9,7 +9,9 @@
   "scripts": {
     "precommit": "pretty-quick --staged",
     "test": "jest --coverage",
-    "test:cov": "jest --watch"
+    "test:cov": "jest --watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "files": [
     "lib",
@@ -62,7 +64,7 @@
     "compression-webpack-plugin": "^1.1.12",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
-    "fork-ts-checker-webpack-plugin": "^0.4.9",
+    "fork-ts-checker-webpack-plugin": "^3.1.1",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.2",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
@@ -76,6 +78,8 @@
     "webpack": "^4.17.1",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-chain": "^5.0.1",
-    "webpack-plugin-inject-external": "^0.4.1"
-  }
+    "webpack-plugin-inject-external": "^0.4.1",
+    "snyk": "^1.474.0"
+  },
+  "snyk": true
 }
