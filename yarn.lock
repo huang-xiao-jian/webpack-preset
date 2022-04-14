@@ -136,6 +136,11 @@
     lodash "^4.17.11"
     node-yaml "^3.1.1"
 
+"@snyk/protect@^1.906.0":
+  version "1.906.0"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.906.0.tgz#4ff306a7f79d1b797a44b760f197f658cb142d3b"
+  integrity sha512-klT+LMCbAwkCkseJ5njqg1oQO5i1KHSnn0TUvsf1HgERCfwmBKWvZBLMGIKqf+tfpWrHiCAggDZDOM/7MHoMrw==
+
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.5.13.tgz#81155a570bd5803a30ec31436bc2c9c0ede38f25"
