@@ -1,0 +1,28 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - '@babel/core > lodash':
+        patched: '2022-10-07T21:54:23.499Z'
+    - html-webpack-plugin > lodash:
+        patched: '2022-10-07T21:54:23.499Z'
+    - webpack-bundle-analyzer > lodash:
+        patched: '2022-10-07T21:54:23.499Z'
+    - webpack-plugin-inject-external > lodash:
+        patched: '2022-10-07T21:54:23.499Z'
+    - '@babel/core > @babel/traverse > lodash':
+        patched: '2022-10-07T21:54:23.499Z'
+    - optimize-css-assets-webpack-plugin > last-call-webpack-plugin > lodash:
+        patched: '2022-10-07T21:54:23.499Z'
+    - webpack-plugin-inject-external > posthtml-inject > lodash:
+        patched: '2022-10-07T21:54:23.499Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2022-10-07T21:54:23.499Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/generator > lodash':
+        patched: '2022-10-07T21:54:23.499Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-10-07T21:54:23.499Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2022-10-07T21:54:23.499Z'
